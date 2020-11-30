@@ -62,13 +62,10 @@
 		A59511CB257561D600124177 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				A59511EF25758E2B00124177 /* Controllers */,
+				A59511EE25758E0600124177 /* Models */,
+				A59511EC25758DE900124177 /* Views */,
 				A59511E22575652000124177 /* Resources */,
-				A59511CC257561D600124177 /* AppDelegate.swift */,
-				A59511CE257561D600124177 /* SceneDelegate.swift */,
-				A59511D0257561D600124177 /* CalculatorController.swift */,
-				A59511D2257561D600124177 /* Main.storyboard */,
-				A59511D5257561D900124177 /* Assets.xcassets */,
-				A59511D7257561D900124177 /* LaunchScreen.storyboard */,
 				A59511DA257561D900124177 /* Info.plist */,
 			);
 			path = Calculator;
@@ -77,11 +74,46 @@
 		A59511E22575652000124177 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A59511E32575653400124177 /* Extentions.swift */,
-				A59511E625756AAB00124177 /* Constants.swift */,
-				A59511E925757C2C00124177 /* Operations.swift */,
+				A59511CC257561D600124177 /* AppDelegate.swift */,
+				A59511CE257561D600124177 /* SceneDelegate.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A59511EC25758DE900124177 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A59511D5257561D900124177 /* Assets.xcassets */,
+				A59511ED25758DEF00124177 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A59511ED25758DEF00124177 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A59511D2257561D600124177 /* Main.storyboard */,
+				A59511D7257561D900124177 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A59511EE25758E0600124177 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A59511E925757C2C00124177 /* Operations.swift */,
+				A59511E625756AAB00124177 /* Constants.swift */,
+				A59511E32575653400124177 /* Extentions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A59511EF25758E2B00124177 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A59511D0257561D600124177 /* CalculatorController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

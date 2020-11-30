@@ -10,9 +10,9 @@ import UIKit
 class CalculatorController: UIViewController {
     
     //Constants and variables
-    var firstNumber = 0
-    var secondNumber = 0
-    var resultNumber = 0
+    var firstNumber: Double = 0
+    var secondNumber: Double = 0
+    var resultNumber: Double = 0
     
     var currentOperation : Operation?
 
@@ -209,11 +209,12 @@ class CalculatorController: UIViewController {
     private var resultLabel : UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.minimumScaleFactor = 2.0
+        label.minimumScaleFactor = 0.5
         label.text = "0"
         label.textColor = .white
         label.font = .systemFont(ofSize: 80, weight: .regular)
         label.textAlignment = .right
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
@@ -424,7 +425,7 @@ class CalculatorController: UIViewController {
     
     @objc func operationIsPressed(_ sender: UIButton) {
         let tag = sender.tag - 1
-        if let text = resultLabel.text, let value = Int(text), firstNumber == 0 {
+        if let text = resultLabel.text, let value = Double(text), firstNumber == 0 {
             firstNumber = value
             resultLabel.text = "0"
         }
@@ -439,8 +440,8 @@ class CalculatorController: UIViewController {
             currentOperation = .divide
         } else if tag == 5 {
             if let operation = currentOperation {
-                var secondNumber = 0
-                if let text = resultLabel.text, let value = Int(text) {
+                var secondNumber: Double = 0
+                if let text = resultLabel.text, let value = Double(text) {
                     secondNumber = value
                 }
                 switch operation {
